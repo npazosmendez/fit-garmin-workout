@@ -1,0 +1,66 @@
+workouts:
+  - name: PECHO + HOMBROS + TRICEPS
+    steps:
+      - name: Press plano
+        series: 5
+        reps: 5
+        notes: calenta bien antes
+      - name: Press inclinado con mancuernas
+        series: 4
+        reps: 10
+      - name: Press sentado en máquina
+        series: 4
+        reps: 10
+        notes: ultima serie drop set. 10 reps, bajo el peso, 10 reps... minimo 3 bajadas
+      - name: Triceps frances acostado con barra
+        series: 4
+        reps: 10
+      - name: Press militar
+        series: 5
+        reps: 6-8
+      - name: Vuelos laterales
+        series: 4
+        reps: 8>8>8
+    
+  - name: PIERNAS
+    steps:
+      - name: Sentadillas
+        series: 4
+        reps: 10-8-6-6
+      - name: Prensa 45 con pies juntos
+        series: 4
+        reps: 12
+      - name: Peso muerto rumano
+        series: 4
+        reps: 8-10
+      - name: Isquio en máquina
+        series: 4
+        reps: 8>8>8
+      - name: Extensión de cuadriceps
+        series: 4
+        reps: 8>8
+      - name: Gemelos parado en máquina
+        series: 4
+        reps: 20-15-12-10
+    
+  - name: ESPALDA + BICEPS
+    steps:
+      - name: Remo parado con agarre triángulo
+        series: 5
+        reps: 6-8
+      - name: Polea dorsal de frente
+        series: 4
+        reps: 10
+      - name: Remo en maquina con agarre triángulo
+        series: 4
+        reps: 12
+      - name: Polea dorsal con agarre triángulo
+        series: 4
+        reps: 8>8>8
+      - name: Curl de biceps con barra W
+        series: 4
+        reps: 8-10
+      - name: Curl de biceps martillo alternado
+        series: 4
+        reps: 10
+
