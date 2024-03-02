@@ -67,19 +67,18 @@ class Workout:
 
         self.add_workout_step_with_params(step)
 
-    def add_workout_step_with_params(self, step):
-        if len(self.steps) > 0:
-            # Additional 2m rest between exercises, total of 3m
-            rest = WorkoutStepMessage()
-            rest.message_index = self.step_index
-            self.step_index += 1
-            rest.duration_type = WorkoutStepDuration.TIME
-            rest.duration_value = 60000 * 2
-            rest.target_type = WorkoutStepTarget.OPEN
-            rest.target_value = 0
-            rest.intensity = Intensity.REST
-            self.steps.append(rest)
+    def add_rest_step_message(self, mins):
+        rest = WorkoutStepMessage()
+        rest.message_index = self.step_index
+        self.step_index += 1
+        rest.duration_type = WorkoutStepDuration.TIME
+        rest.duration_value = 60000 * mins
+        rest.target_type = WorkoutStepTarget.OPEN
+        rest.target_value = 0
+        rest.intensity = Intensity.REST
+        self.steps.append(rest)
 
+    def add_workout_step_message(self, step):
         workout_step_mesg = WorkoutStepMessage()
         workout_step_mesg.message_index = self.step_index
         self.step_index += 1
@@ -111,24 +110,23 @@ class Workout:
         workout_step_mesg.exercise_name = exercise_id
         workout_step_mesg.repeat_steps = 4
         self.steps.append(workout_step_mesg)
+        return workout_step_mesg.message_index
 
+    def add_workout_step_with_params(self, step):
+        if len(self.steps) > 0:
+            # Additional 2m rest between exercises, total of 3m
+            self.add_rest_step_message(2)
+
+        workout_step_index = self.add_workout_step_message(step)
         if step['series'] > 0:
             # 1m rest between series
-            rest = WorkoutStepMessage()
-            rest.message_index = self.step_index
-            self.step_index += 1
-            rest.duration_type = WorkoutStepDuration.TIME
-            rest.duration_value = 60000
-            rest.target_type = WorkoutStepTarget.OPEN
-            rest.target_value = 0
-            rest.intensity = Intensity.REST
-            self.steps.append(rest)
+            self.add_rest_step_message(1)
 
             repeat = WorkoutStepMessage()
             repeat.message_index = self.step_index
             self.step_index += 1
             repeat.duration_type = WorkoutStepDuration.REPEAT_UNTIL_STEPS_CMPLT
-            repeat.duration_value = workout_step_mesg.message_index
+            repeat.duration_value = workout_step_index
             repeat.target_value = step['series']
             self.steps.append(repeat)
 
