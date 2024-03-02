@@ -50,7 +50,7 @@ class Workout:
         step = {
             'name': name,
             'series': series,
-            'duration_type': WorkoutStepDuration.DISTANCE,
+            'duration_type': WorkoutStepDuration.REPS,
             'duration_value': 0,
             'target_type': WorkoutStepTarget.OPEN,
             'target_value': 0,
@@ -85,7 +85,8 @@ class Workout:
         self.step_index += 1
 
         workout_step_mesg.duration_type = step['duration_type']
-        workout_step_mesg.duration_value = step['duration_value']
+        if 'duration_value' in step:
+            workout_step_mesg.duration_value = step['duration_value']
         if step['notes']:
             workout_step_mesg.notes = step['notes']
 
