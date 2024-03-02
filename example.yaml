@@ -8,7 +8,7 @@ workouts:
       - name: Press inclinado con mancuernas
         series: 4
         reps: 10
-      - name: Press sentado en máquina
+      - name: Press sentado en maquina
         series: 4
         reps: 10
         notes: ultima serie drop set. 10 reps, bajo el peso, 10 reps... minimo 3 bajadas
@@ -33,34 +33,34 @@ workouts:
       - name: Peso muerto rumano
         series: 4
         reps: 8-10
-      - name: Isquio en máquina
+      - name: Isquio en maquina
         series: 4
         reps: 8>8>8
-      - name: Extensión de cuadriceps
+      - name: Extension de cuadriceps
         series: 4
         reps: 8>8
-      - name: Gemelos parado en máquina
+      - name: Gemelos parado maquina
         series: 4
         reps: 20-15-12-10
     
   - name: ESPALDA + BICEPS
     steps:
-      - name: Remo parado con agarre triángulo
+      - name: Remo parado triangulo
         series: 5
         reps: 6-8
       - name: Polea dorsal de frente
         series: 4
         reps: 10
-      - name: Remo en maquina con agarre triángulo
+      - name: Remo maquina triangulo
         series: 4
         reps: 12
-      - name: Polea dorsal con agarre triángulo
+      - name: Polea dorsal c/ triangulo
         series: 4
         reps: 8>8>8
-      - name: Curl de biceps con barra W
+      - name: Curl biceps W
         series: 4
         reps: 8-10
-      - name: Curl de biceps martillo alternado
+      - name: Curl de biceps martillo alt.
         series: 4
         reps: 10
 
